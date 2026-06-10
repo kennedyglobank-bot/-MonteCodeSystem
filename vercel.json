@@ -13,7 +13,7 @@
   ],
   "functions": {
     "api/vercel.ts": {
-      "runtime": "vercel-node@latest",
+      "runtime": "@vercel/node",
       "memory": 1024,
       "maxDuration": 10
     }
