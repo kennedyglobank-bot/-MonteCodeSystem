@@ -3,7 +3,7 @@ export { COOKIE_NAME, ONE_YEAR_MS } from "@shared/const";
 // Generate login URL at runtime so redirect URI reflects the current origin.
 export const getLoginUrl = () => {
   // Hardcoded values to ensure it works on Vercel
-  const oauthPortalUrl = "https://manus.im";
+  const oauthPortalUrl = "https://controleloca.online";
   const appId = "app_montecode_system"; 
   const redirectUri = `${window.location.origin}/api/oauth/callback`;
   const state = btoa(redirectUri);
