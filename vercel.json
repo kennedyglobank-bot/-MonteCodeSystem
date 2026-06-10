@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server/_core/index.ts",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "client/index.html",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "client/dist" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "server/_core/index.ts"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "client/index.html"
+    }
+  ],
+  "env": {
+    "DATABASE_URL": "",
+    "JWT_SECRET": "",
+    "VITE_APP_ID": "",
+    "OAUTH_SERVER_URL": "",
+    "VITE_OAUTH_PORTAL_URL": "",
+    "OWNER_OPEN_ID": "",
+    "OWNER_NAME": ""
+  }
+}
