@@ -4,7 +4,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/api/index.ts"
+      "destination": "/api/vercel.ts"
     },
     {
       "source": "/(.*)",
@@ -12,8 +12,10 @@
     }
   ],
   "functions": {
-    "api/index.ts": {
-      "runtime": "vercel-node@latest"
+    "api/vercel.ts": {
+      "runtime": "vercel-node@latest",
+      "memory": 1024,
+      "maxDuration": 10
     }
   }
 }
