@@ -1,5 +1,7 @@
 {
   "version": 2,
+  "framework": "vite",
+  "installCommand": "pnpm install --no-frozen-lockfile",
   "rewrites": [
     {
       "source": "/api/(.*)",
